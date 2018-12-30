@@ -1,4 +1,4 @@
-XXX is a tool for parameter identification for systems given as a chemical reaction network.
+This is a tool for the identification of unknown rate parameters of chemical reaction networks.
 
 The approach was presented in the paper [*Adaptive moment closure for parameter inference of biochemical reaction networks*](https://doi.org/10.1016/j.biosystems.2016.07.005) in BioSystems 2016.
 
