@@ -1,0 +1,24 @@
+species:
+    TF   stochastic   0; % TF
+    G    boolean      0; % gene
+    P    stochastic   0; % protein
+
+
+
+parameters:
+    a = 2 * 10^(-2);
+    b = 2 * 10^(-3);
+    c = 2 * 10^(-4);
+    d = 2 * 10^(-1);
+    e = 2 * 10^(-4);
+    f = 2 * 10^(-2);
+
+
+
+reactions:
+    rate = a;                  {TF}   > {TF+1};
+    rate = b * TF * (1 - G);   {TF,G} > {TF-1,G+1};
+    rate = c * G;              {TF,G} > {TF+1,G-1};
+    rate = d * G;              {P}    > {P+1};
+    rate = e * TF * P;         {TF}   > {TF-1};
+    rate = f * P;              {P}    > {P-1};

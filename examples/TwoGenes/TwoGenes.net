@@ -1,0 +1,26 @@
+species:
+    P1   stochastic   0; % protein 1
+    P2   stochastic   0; % protein 2
+    G1   boolean      0; % gene 1
+    G2   boolean      0; % gene 2
+
+
+parameters:
+    c1 = 0.1;
+    c2 = 0.01;
+    c3 = 10;
+    c4 = 0.005;
+    c5 = 0.1;
+    c6 = 10;
+    d  = 0.1;
+
+
+reactions:
+    rate = c1 * (1 - G1);        {G1} > {G1+1};
+    rate = c2 * G1 * P2;         {G1} > {G1-1};
+    rate = c3 * G1;              {P1} > {P1+1};
+    rate = d * P1;               {P1} > {P1-1};
+    rate = c4 * (1 - G2) * P1;   {G2} > {G2+1};
+    rate = c5 * G2;              {G2} > {G2-1};
+    rate = c6 * G2;              {P2} > {P2+1};
+    rate = d * P2;               {P2} > {P2-1};

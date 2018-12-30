@@ -1,0 +1,24 @@
+species:
+    X stochastic   0; % monomer TF
+    Y stochastic   0; % dimer TF
+    Z stochastic   0; % protein
+
+
+
+parameters:
+    a = 2 * 10^(-3);
+    b = 2 * 10^(-4);
+    c = 2 * 10^(-4);
+    d = 2 * 10^(-1);
+    e = 2 * 10^(-4);
+    f = 2 * 10^(-3);
+
+
+
+reactions:
+    rate = a;               {X}   > {X+1};
+    rate = b * X * (X-1);   {X,Y} > {X-2,Y+1};
+    rate = c * Y;           {X,Y} > {X+2,Y-1};
+    rate = d * Y;           {Z}    > {Z+1};
+    rate = e * X * Z;       {X}    > {X-1};
+    rate = f * Z;           {Z}    > {Z-1};

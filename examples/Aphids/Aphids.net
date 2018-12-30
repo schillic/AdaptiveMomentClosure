@@ -1,0 +1,17 @@
+species:
+    N   stochastic   0; % Aphids
+    C   stochastic   0; % cumulative
+
+
+parameters:
+    a = 0.03;
+    b = 0.012;
+    c = 0.25 * 10^(-4);
+    d = 0.003;
+
+
+reactions:
+    rate = a;           {N,C} > {N+1,C+1};
+    rate = b * N;       {N,C} > {N+1,C+1};
+    rate = c * N * C;   {N}   > {N-1};
+    rate = d * C;       {C}   > {C-1};
