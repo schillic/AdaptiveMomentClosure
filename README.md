@@ -8,16 +8,16 @@ You need to have Matlab.
 
 We use the following libraries:
 - [StochDynTools](https://www.ece.ucsb.edu/~hespanha/software/stochdyntool.html)
-- [SUNDIALS](http://computation.llnl.gov/casc/sundials/main.html) which provides the *CVODE* an optional but much faster solver of ordinary differential equations.
+- [SUNDIALS](http://computation.llnl.gov/casc/sundials/main.html) (which provides *CVODE*, an optional but much faster solver of ordinary differential equations)
 
-We deploy The libraries, but it may be necessary to install them anyway.
+We deploy the libraries, but it may be necessary to install them anyway.
 
 # RUN
 
 ## Initialization
 
 Open Matlab.
-Run `init` once per session.
+Run `init` at the beginning of each session.
 
 ## Running a model or benchmarks
 
